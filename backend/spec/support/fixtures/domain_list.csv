@@ -1,0 +1,13 @@
+-- domeny.txt
+-- domena - nazov domeny
+-- ID reg - Identifikator registratora domeny
+-- ID drzitela - Identifikator drzitela domeny (ak domena nie je premigrovana tak ako identifikator sa pouzije ICO)
+-- flag NEW/OLD - NEW domena je premigrovana resp. registrovana v novom systeme, OLD - domena nie je premigrovana
+-- Stav domeny - stav v ktorom sa nachadza domena (do domeny.txt sa generuju iba domeny ktore sa generuju do zony SK)
+-- NS1-4 - ns zaznamy pre domenu
+-- ICO drzitela - ICO drzitela domeny
+-- Generovany: 12.12.2015 04:40
+
+domena;ID reg;ID drzitela;NEW(OLD);Stav domeny;NS1;NS2;NS3;NS4;ICO drzitela
+0-24.sk;WEBG-0001;WEBG-0001;NEW;DOM_OK;ns.webglobe.sk;ns2.webglobe.sk;ns3.webglobe.sk;;36306444
+00.sk;WEBG-0001;MILO-0245;NEW;DOM_OK;ns1.00.sk;ns2.00.sk;;;45593914
