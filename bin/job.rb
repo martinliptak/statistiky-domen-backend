@@ -10,4 +10,6 @@ aggregations = compute_aggregations.call(domain_list)
 persist_aggregations.call(Date.today, aggregations)
 results = prepare_chart_data.call(aggregations)
 
-puts results.inspect
+require "json"
+json = results.to_json
+$stdout.write(json)
