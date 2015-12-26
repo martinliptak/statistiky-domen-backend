@@ -13,6 +13,9 @@ persist_aggregations = PersistAggregations.new
 repo = ARGV[0]
 start_date = ARGV[1]
 
+Encoding.default_external = Encoding::UTF_8
+Encoding.default_internal = Encoding::UTF_8
+
 git = Git.open(repo, :log => Logger.new(false))
 commits = git.log(1_000_000).since("#{start_date} 00:00:00").select { |commit|
   commit.author.email == "statistiky@statistiky"
