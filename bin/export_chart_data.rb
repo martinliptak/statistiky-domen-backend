@@ -1,4 +1,11 @@
+#
+# Exports data for charts
+#
+# ruby export_chart_data.rb path/to/data.json
+#
+
 require_relative "../config/environment"
+require "json"
 
 download_domain_list = DownloadDomainList.new
 compute_aggregations = ComputeAggregations.new
@@ -10,6 +17,6 @@ aggregations = compute_aggregations.call(domain_list)
 persist_aggregations.call(Date.today, aggregations)
 results = prepare_chart_data.call(aggregations)
 
-require "json"
-json = results.to_json
-$stdout.write(json)
+open ARGV[0], "w" do |file|
+  file.write results.to_json
+end
