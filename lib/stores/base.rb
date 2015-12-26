@@ -6,6 +6,10 @@ module Stores
       @@connection = SQLite3::Database.new(filepath)
     end
 
+    def self.established_connection
+      @@connection
+    end
+
     private
 
     def connection
