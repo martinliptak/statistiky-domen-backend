@@ -1,3 +1,5 @@
+require_relative "base.rb"
+
 module Stores
   class Count < Stores::Base
     attr_reader :series_name
