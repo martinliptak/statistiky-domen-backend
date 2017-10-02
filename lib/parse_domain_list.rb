@@ -27,13 +27,11 @@ class ParseDomainList
       name: row[0],
       registrar: row[1],
       holder: row[2],
-      new_or_old: row[3],
-      status: row[4],
-      ns1: row[5],
-      ns2: row[6],
-      ns3: row[7],
-      ns4: row[8],
-      holder_in: row[9]
+      status: "DOM_#{row[3]}",
+      ns1: row[4],
+      ns2: row[5],
+      ns3: row[6],
+      ns4: row[7]
     }
   end
 end

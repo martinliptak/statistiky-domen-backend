@@ -12,30 +12,26 @@ describe ParseDomainList do
       extractor = Minitest::Mock.new
       extractor.expect :extract, nil, [
         {
-          :name => "0-24.sk",
-          :registrar => "WEBG-0001",
-          :holder => "WEBG-0001",
-          :new_or_old => "NEW",
+          :name => "0-0.sk",
+          :registrar => "WEBS-0001",
+          :holder => "JNFE-0002",
           :status => "DOM_OK",
-          :ns1 => "ns.webglobe.sk",
-          :ns2 => "ns2.webglobe.sk",
-          :ns3 => "ns3.webglobe.sk",
-          :ns4 => nil,
-          :holder_in => "36306444"
+          :ns1 => "ns2.websupport.sk",
+          :ns2 => "ns3.websupport.sk",
+          :ns3 => "ns1.websupport.sk",
+          :ns4 => nil
         }
       ]
       extractor.expect :extract, nil, [
         {
-          :name => "00.sk",
+          :name => "0-24.sk",
           :registrar => "WEBG-0001",
-          :holder => "MILO-0245",
-          :new_or_old => "NEW",
+          :holder => "WEBG-0001",
           :status => "DOM_OK",
-          :ns1 => "ns1.00.sk",
-          :ns2 => "ns2.00.sk",
-          :ns3 => nil,
-          :ns4 => nil,
-          :holder_in => "45593914"
+          :ns1 => "ns.webglobe.sk",
+          :ns2 => "ns2.webglobe.sk",
+          :ns3 => "ns3.webglobe.sk",
+          :ns4 => nil
         }
       ]
 
